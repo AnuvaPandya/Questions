@@ -4,16 +4,12 @@ import { useState } from 'react';
 import { Palindrome } from './Palindrome';
 import TextField from '@mui/material/TextField';
 import { Button } from '@mui/material';
-
-// import { Input } from '@mui/material';
+import { CountCharacterComponent } from './CountCharacterComponent';
 
 function App() {
-  
-  //Use state galat use kar rakha hai, is selected part ke i.e. useState(value) value ki jagah kuch string number hona thaa jo actually const[value, setValue] iski value me store hota
-  
-  const [word, setWord] = useState("");
-  // const ariaLabel = { 'aria-label': 'description' };
-  return (
+
+    const [number, setNumber] = useState(0);
+       return (
     <div>
       <form>
         <label>
@@ -23,10 +19,10 @@ function App() {
         onClick={()=> alert(Palindrome(word) == true ? "Palindrome" : "Not a Palindrome") }>Check</Button>
         <div>{word} is a palindrome ??????</div>
         <div>{Palindrome(word).toString()}</div>
+        <CountCharacterComponent />
         </label>
       </form>
     </div>
   );
 }
-
 export default App;
