@@ -1,27 +1,43 @@
-import './App.css';
-import React from 'react';
-import { useState } from 'react';
-import { Palindrome } from './Palindrome';
-import TextField from '@mui/material/TextField';
-import { Button } from '@mui/material';
-import { CountCharacterComponent } from './CountCharacterComponent';
+import "./App.css";
+import React from "react";
+import { useState } from "react";
+import { Palindrome } from "./Palindrome";
+import TextField from "@mui/material/TextField";
+import { Button } from "@mui/material";
+import { CountCharacterComponent } from "./CountCharacterComponent";
+import DisplayData from "./DisplayDate";
+import { countCharacter } from "./CountCharacters";
 
 function App() {
-
-    const [number, setNumber] = useState(0);
-       return (
+  // const [number, setNumber] = useState(0);
+  return (
     <div>
-      <form>
+      <DisplayData />
+      {/* <form>
         <label>
-        <TextField id="outlined-basic" label="Outlined" variant="outlined" 
-        onChange={(event) => {setWord(event.target.value)}} />
-        <Button variant="outlined"
-        onClick={()=> alert(Palindrome(word) == true ? "Palindrome" : "Not a Palindrome") }>Check</Button>
-        <div>{word} is a palindrome ??????</div>
-        <div>{Palindrome(word).toString()}</div>
-        <CountCharacterComponent />
+          <TextField
+            id="outlined-basic"
+            label="Outlined"
+            variant="outlined"
+            onChange={(event) => {
+              setWord(event.target.value);
+            }}
+          />
+          <Button
+            variant="outlined"
+            onClick={() =>
+              alert(
+                Palindrome(word) == true ? "Palindrome" : "Not a Palindrome"
+              )
+            }
+          >
+            Check
+          </Button>
+          <div>{word} is a palindrome ??????</div>
+          <div>{Palindrome(word).toString()}</div>
+          <CountCharacterComponent />
         </label>
-      </form>
+      </form> */}
     </div>
   );
 }

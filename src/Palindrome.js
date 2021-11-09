@@ -6,3 +6,4 @@ export function Palindrome (word) {
         return true; } 
         else { return false; }
 }
+
